@@ -11,7 +11,7 @@ export const botConfig = {
   // - "invisible" = appears offline
   presence: {
     // Current online state shown on Discord.
-    status: "online",
+    status: "idle",
 
     // Activity lines shown under the bot name.
     // `type` number mapping from Discord:
@@ -24,7 +24,7 @@ export const botConfig = {
     activities: [
       {
         name: "Custom Status", // required by Discord API, not shown in the client
-        state: "Under Development!",     // this is what people actually see
+        state: "Under Development! V: B: 0.3",     // this is what people actually see
         type: 4,               // Custom
       },
     ],
@@ -48,7 +48,7 @@ export const botConfig = {
     testGuildId: process.env.TEST_GUILD_ID,
 
     // When true (or MAINTENANCE_MODE=true), only bot owners can run commands.
-    maintenanceMode: process.env.MAINTENANCE_MODE === "true",
+    maintenanceMode: process.env.MAINTENANCE_MODE === "false",
 
     // Command prefix for text-based commands (e.g., "!" for "!ping").
     // Supports both slash commands and prefix commands.
@@ -63,7 +63,7 @@ export const botConfig = {
     defaultQuestions: [
       { question: "What is your name?", required: true },
       { question: "How old are you?", required: true },
-      { question: "Why do you want to join?", required: true },
+      { question: "Why do you want to tell our moderators to help you?", required: true },
     ],
 
     // Embed colors by application status.
@@ -141,7 +141,7 @@ export const botConfig = {
     },
     footer: {
       // Default footer text used in bot embeds.
-      text: "Titan Bot",
+      text: "Nebula Client",
       // Footer icon URL (null = no icon).
       icon: null,
     },
@@ -161,11 +161,11 @@ export const botConfig = {
   economy: {
     currency: {
       // Currency display name.
-      name: "coins",
+      name: "Star Dust",
       // Plural display name.
-      namePlural: "coins",
+      namePlural: "Star Dust",
       // Currency symbol shown in balances.
-      symbol: "$",
+      symbol: "Star Dust",
     },
 
     // Starting balance for new users.
@@ -453,18 +453,18 @@ export const botConfig = {
     leveling: true,
     moderation: true,
     logging: true,
-    welcome: true,
+    welcome: false,
 
     // Community engagement systems.
     tickets: true,
     giveaways: true,
-    birthday: true,
-    counter: true,
+    birthday: false,
+    counter: false,
 
     // Security and self-service systems.
-    verification: true,
+    verification: false,
     reactionRoles: true,
-    joinToCreate: true,
+    joinToCreate: false,
 
     // Utility/quality-of-life modules.
     voice: true,
@@ -473,7 +473,7 @@ export const botConfig = {
     utility: true,
     community: true,
     fun: true,
-    music: true,
+    music: false,
   },
 };
 
