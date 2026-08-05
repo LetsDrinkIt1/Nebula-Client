@@ -138,12 +138,12 @@ export default {
                 .addFields(
                     {
                         name: `Your New Cash (${interaction.user.username})`,
-                        value: `$${robberData.wallet.toLocaleString()}`,
+                        value: `${robberData.wallet.toLocaleString()} Star Dust`,
                         inline: true,
                     },
                     {
                         name: `Victim's New Cash (${victimUser.username})`,
-                        value: `$${victimData.wallet.toLocaleString()}`,
+                        value: `${victimData.wallet.toLocaleString()} Star Dust`,
                         inline: true,
                     },
                 )
