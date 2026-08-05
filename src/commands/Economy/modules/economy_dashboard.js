@@ -306,7 +306,7 @@ async function handleAddCurrency(selectInteraction, rootInteraction, guild, clie
     const currencySymbol = BotConfig.economy.currency.symbol;
 
     await submitted.reply({
-        embeds: [successEmbed('Currency Added', `Successfully added ${currencySymbol}${amount.toLocaleString()} to ${member.user.tag}'s ${type}.\n**New Balance:** ${currencySymbol}${newBalance.toLocaleString()}`)],
+        embeds: [successEmbed('Currency Added', `Successfully added ${amount.toLocaleString()} Star Dust to ${member.user.tag}'s ${type}.\n**New Balance:** ${newBalance.toLocaleString()} Star Dust`)],
         flags: MessageFlags.Ephemeral,
     });
 
@@ -353,7 +353,7 @@ async function handleRemoveCurrency(selectInteraction, rootInteraction, guild, c
         .setStyle(TextInputStyle.Short)
         .setPlaceholder('wallet')
         .setMinLength(1)
-        .setMaxLength(5)
+        .setMaxLength(6)
         .setRequired(true);
 
     modal.addLabelComponents(userLabel);
@@ -428,9 +428,9 @@ async function handleChangeCurrency(selectInteraction, rootInteraction, guild) {
         .setLabel('New Currency Symbol')
         .setStyle(TextInputStyle.Short)
         .setValue(BotConfig.economy.currency.symbol)
-        .setPlaceholder('$')
+        .setPlaceholder('Star Dust')
         .setMinLength(1)
-        .setMaxLength(3)
+        .setMaxLength(10)
         .setRequired(true);
 
     modal.addComponents(new ActionRowBuilder().addComponents(symbolInput));
@@ -449,7 +449,7 @@ async function handleChangeCurrency(selectInteraction, rootInteraction, guild) {
     const newSymbol = submitted.fields.getTextInputValue('currency_symbol').trim();
 
     if (newSymbol.length === 0 || newSymbol.length > 3) {
-        await replyUserError(submitted, { type: ErrorTypes.VALIDATION, message: 'Currency symbol must be 1-3 characters long.' });
+        await replyUserError(submitted, { type: ErrorTypes.VALIDATION, message: 'Currency symbol must be 1-10 characters long.' });
         return;
     }
 
