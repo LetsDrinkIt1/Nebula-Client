@@ -99,7 +99,7 @@ export default {
 
             const embed = successEmbed(
                 "💼 Work Complete!",
-                `You worked as a **${job}** and earned **$${earned.toLocaleString()}**!${multiplierMessage}`
+                `You worked as a **${job}** and earned **${earned.toLocaleString()} Star Dust**!${multiplierMessage}`
             )
                 .addFields(
                     {
