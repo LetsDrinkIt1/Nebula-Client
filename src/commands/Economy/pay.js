@@ -103,17 +103,17 @@ export default {
 
             const embed = successEmbed(
                 'Payment Successful',
-                `You successfully paid **${receiver.username}** the amount of **$${amount.toLocaleString()}**!`
+                `You successfully paid **${receiver.username}** the amount of **${amount.toLocaleString()} Star Dust**!`
             )
                 .addFields(
                     {
                         name: "Payment Amount",
-                        value: `$${amount.toLocaleString()}`,
+                        value: `${amount.toLocaleString()} Star Dust`,
                         inline: true,
                     },
                     {
                         name: "Your New Balance",
-                        value: `$${updatedSenderData.wallet.toLocaleString()}`,
+                        value: `${updatedSenderData.wallet.toLocaleString()} Star Dust`,
                         inline: true,
                     },
                 )
@@ -135,10 +135,10 @@ export default {
             try {
                 const receiverEmbed = createEmbed({ 
                     title: "Incoming Payment!", 
-                    description: `${interaction.user.username} paid you **$${amount.toLocaleString()}**.` 
+                    description: `${interaction.user.username} paid you **${amount.toLocaleString()} Star Dust**.` 
                 }).addFields({
                     name: "Your New Cash",
-                    value: `$${updatedReceiverData.wallet.toLocaleString()}`,
+                    value: `${updatedReceiverData.wallet.toLocaleString()} Star Dust`,
                     inline: true,
                 });
                 await receiver.send({ embeds: [receiverEmbed] });
