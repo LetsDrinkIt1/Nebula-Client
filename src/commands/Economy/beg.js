@@ -63,10 +63,10 @@ export default {
                 newCash += amountWon;
 
                 const successMessages = [
-                    `A kind stranger drops **Star Dust${amountWon.toLocaleString()}** into your cup.`,
-                    `You spotted an unattended wallet! You grab **Star Dust${amountWon.toLocaleString()}** and run.`,
-                    `Someone took pity on you and gave you **Star Dust${amountWon.toLocaleString()}**!`,
-                    `You found **Star Dust${amountWon.toLocaleString()}** under a park bench.`,
+                    `A kind stranger drops **${amountWon.toLocaleString()} Star Dust** into your cup.`,
+                    `You spotted an unattended wallet! You grab **${amountWon.toLocaleString()} Star Dust** and run.`,
+                    `Someone took pity on you and gave you **t${amountWon.toLocaleString()} Star Dust**!`,
+                    `You found **${amountWon.toLocaleString()} Star Dust** under a park bench.`,
                 ];
 
                 replyEmbed = successEmbed(
