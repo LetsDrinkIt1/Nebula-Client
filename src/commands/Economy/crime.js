@@ -94,7 +94,7 @@ export default {
                 
                 const embed = successEmbed(
                     "🕵️ Crime Successful!",
-                    `You successfully committed ${crime.name} and earned **${amountEarned}** Star Dust!`
+                    `You successfully committed ${crime.name} and earned **${amountEarned} Star Dust**!`
                 );
                 
                 await InteractionHelper.safeEditReply(interaction, { embeds: [embed] });
@@ -110,7 +110,7 @@ export default {
                 const embed = warningEmbed(
                     "🚔 Crime Failed!",
                     `You were caught while attempting ${crime.name} and have been sent to jail! ` +
-                    `You were fined ${fine.toLocaleString()} coins and will be in jail for 2 hours.`
+                    `You were fined ${fine.toLocaleString()} Star Dust and will be in jail for 2 hours.`
                 );
                 
                 await InteractionHelper.safeEditReply(interaction, { embeds: [embed] });
