@@ -66,7 +66,7 @@ export default {
                     },
                     {
                         name: "🏦 Bank",
-                        value: `${bank.toLocaleString()} / $${maxBank.toLocaleString()} Star Dust`,
+                        value: `${bank.toLocaleString()} / ${maxBank.toLocaleString()} Star Dust`,
                         inline: true,
                     },
                     {
