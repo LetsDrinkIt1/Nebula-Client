@@ -61,17 +61,17 @@ export default {
                 .addFields(
                     {
                         name: "💵 Cash",
-                        value: `Star Dust${wallet.toLocaleString()}`,
+                        value: `${wallet.toLocaleString()} Star Dust`,
                         inline: true,
                     },
                     {
                         name: "🏦 Bank",
-                        value: `Star Dust${bank.toLocaleString()} / $${maxBank.toLocaleString()}`,
+                        value: `${bank.toLocaleString()} / $${maxBank.toLocaleString()} Star Dust`,
                         inline: true,
                     },
                     {
                         name: "💰 Total",
-                        value: `Star Dust${(wallet + bank).toLocaleString()}`,
+                        value: `${(wallet + bank).toLocaleString()} Star Dust`,
                         inline: true,
                     }
                 )
