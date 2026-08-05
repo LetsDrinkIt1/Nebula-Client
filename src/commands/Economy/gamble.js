@@ -53,7 +53,7 @@ export default {
                 throw createError(
                     "Insufficient cash for gamble",
                     ErrorTypes.VALIDATION,
-                    `You only have $${userData.wallet.toLocaleString()} cash, but you are trying to bet $${betAmount.toLocaleString()}.`,
+                    `You only have ${userData.wallet.toLocaleString()} Star Dust cash, but you are trying to bet ${betAmount.toLocaleString()} Star Dust.`,
                     { required: betAmount, current: userData.wallet }
                 );
             }
@@ -88,14 +88,14 @@ export default {
 
                 resultEmbed = successEmbed(
                     "🎉 You Won!",
-                    `You successfully gambled and turned your **$${betAmount.toLocaleString()}** bet into **$${amountWon.toLocaleString()}**!${cloverMessage}`,
+                    `You successfully gambled and turned your **${betAmount.toLocaleString()} Star Dust** bet into **${amountWon.toLocaleString()} Star Dust**!${cloverMessage}`,
                 );
             } else {
 cashChange = -betAmount;
 
                 resultEmbed = warningEmbed(
                     "💔 You Lost...",
-                    `The dice rolled against you. You lost your **$${betAmount.toLocaleString()}** bet.`,
+                    `The dice rolled against you. You lost your **${betAmount.toLocaleString()} Star Dust** bet.`,
                 );
             }
 
