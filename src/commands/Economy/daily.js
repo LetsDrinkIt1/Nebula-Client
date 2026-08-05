@@ -66,7 +66,7 @@ export default {
                     DAILY_AMOUNT * PREMIUM_BONUS_PERCENTAGE,
                 );
                 earned += bonusAmount;
-                bonusMessage = `\n✨ **Premium Bonus:** +Star Dust${bonusAmount.toLocaleString()}`;
+                bonusMessage = `\n✨ **Premium Bonus:** + ${bonusAmount.toLocaleString()} Star Dust`;
                 hasPremiumRole = true;
             }
 
@@ -86,7 +86,7 @@ export default {
 
             const embed = successEmbed(
                 "✅ Daily Claimed!",
-                `You have claimed your daily **Star Dust${earned.toLocaleString()}**!${bonusMessage}`
+                `You have claimed your daily **${earned.toLocaleString()} Star Dust**!${bonusMessage}`
             )
                 .addFields({
                     name: "New Cash Balance",
