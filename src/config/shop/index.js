@@ -4,10 +4,10 @@ import { botConfig } from '../bot.js';
 const { currency } = botConfig.economy;
 
 export const shopConfig = {
-    name: 'TitanBot Shop',
+    name: 'Nebula Client',
     currency: currency.name,
     currencyName: currency.name,
-    currencyNamePlural: currency.namePlural || `${currency.name}s`,
+    currencyNamePlural: currency.namePlural || `Star Dust{currency.name}s`,
     currencySymbol: currency.symbol || '💵',
     
     categories: [
