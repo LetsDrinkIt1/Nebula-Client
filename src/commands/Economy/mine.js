@@ -79,7 +79,7 @@ userData.lastMine = now;
 
             const embed = successEmbed(
                 "💰 Mining Expedition Successful!",
-                `You explored a **${location}** and managed to find minerals worth **$${finalEarned.toLocaleString()}**!${multiplierMessage}`,
+                `You explored a **${location}** and managed to find minerals worth **${finalEarned.toLocaleString()} Star Dust**!${multiplierMessage}`,
             )
                 .addFields({
                     name: "New Cash Balance",
